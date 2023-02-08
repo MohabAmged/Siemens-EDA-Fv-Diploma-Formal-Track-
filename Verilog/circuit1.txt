@@ -1,0 +1,45 @@
+module circuit (A,B,C1,C2,C3,F)
+
+
+input A,B,C1,C2,C3;
+
+output reg F;
+
+wire z1 ;
+
+always @(*) begin
+
+
+if( C1 == 1) begin
+
+Z1=B;
+
+end
+
+else if(C1 == 0) begin
+
+Z1=A;
+end
+
+
+if( (C2 & C3 ) == 1) begin
+
+F=~Z1;
+
+end
+
+else if( (C2 & C3) == 0) begin
+
+F=Z1;
+
+end
+
+
+
+
+end
+
+
+
+
+endmodule 
